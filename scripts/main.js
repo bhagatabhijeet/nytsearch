@@ -6,6 +6,8 @@ let searchCount="";
 let startYear="";
 let endYear="";
 
+let searchObject="";
+
 
 $(document).ready(function(){
     // alert("i am alive");
@@ -15,19 +17,21 @@ $(document).ready(function(){
 
 
 
-    $.ajax({
-        url:queryURLBase,
-        method:'GET'
-    }).then(function(data){
-        console.log(data);
-    });
+   
 });
 
 
 // this is where the search will happen
 function searchArticles(event){
-    buildURL();
     event.preventDefault();
+    // alert(buildURL());
+    $.ajax({
+        url:queryURLBase,
+        method:'GET'
+    }).then(function(data){
+        // console.log(data);
+        searchObject =data;
+    });
 }
 
 function buildURL(){
