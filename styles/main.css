@@ -11,3 +11,12 @@ footer {
 .footer-content {
     margin-top: -12px;
 }
+#pageTop {
+     font-family: 'UnifrakturCook', cursive;
+    }
+
+.jumbotron {
+    background-color: #20315A ; 
+    color: white; 
+    margin-top: 5px;
+}
