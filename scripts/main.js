@@ -41,7 +41,11 @@ function searchArticles(event){
 
 function renderResults(data) {
     // console.log(data);
-    // alert(data.status);
+
+    let  searchCount = $("#numRecordsSelect").val();
+    //clear old divs
+    $('#search-results').empty();
+    data.response.docs=data.response.docs.slice(1,parseInt(searchCount)+1);
     data.response.docs.forEach(function(element) {
         const articleDiv = $('<div>');
         articleDiv.text(element.abstract);
