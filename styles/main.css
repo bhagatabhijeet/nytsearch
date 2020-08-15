@@ -24,3 +24,9 @@ footer {
 .fa-github {
     margin: 4px;
 }
+
+.search-item-div {
+    border: 1px solid #20315A;
+    padding: 5px;
+
+}

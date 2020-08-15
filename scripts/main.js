@@ -25,12 +25,26 @@ $(document).ready(function(){
 function searchArticles(event){
     event.preventDefault();
     // alert(buildURL());
+    let strURL = buildURL();
     $.ajax({
-        url:queryURLBase,
+        url:strURL,
         method:'GET'
     }).then(function(data){
         // console.log(data);
-        searchObject =data;
+        // searchObject=data;
+        renderResults(data);
+    });
+    
+}
+
+function renderResults(data) {
+    // console.log(data);
+    // alert(data.status);
+    data.response.docs.forEach(function(element) {
+        const articleDiv = $('<div>');
+        articleDiv.text(element.abstract);
+        articleDiv.addClass('search-item-div');
+        $('#search-results').append(articleDiv);
     });
 }
 
