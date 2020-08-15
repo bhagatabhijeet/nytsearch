@@ -22,6 +22,65 @@
 <body>
     <div class="container">
         <!-- varune's Search form code -->
+    	<!-- Bootstrap Jumbotron/Title -->
+	<div class="jumbotron" style="background-color: #20315A ; color: white; margin-top: 5px;">
+		<h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+	</div>
+
+	<!-- Box with title for inputs -->
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i> Search Parameters</strong></h3>
+                </div>
+                <div class="panel-body">
+    
+                    <!-- Form inputs start here-->
+                    <form role="form">
+    
+                        <!-- Search term input-->
+                        <div class="form-group">
+                            <label for="search">Search Term:</label>
+                            <input type="text" class="form-control" id="searchTerm">
+                        </div>
+    
+                        <!-- # of records to retrieve input -->
+                        <div class="form-group">
+                            <label for="pwd">Number of Records to Retrieve:</label>
+                            <select class="form-control" id="numRecordsSelect">
+                                <option value=1>1</option>
+                                <!-- Setting 5 records as default -->
+                                <option value=5 selected>5</option>
+                                <option value=10>10</option>
+                            </select>
+                        </div>
+    
+                        <!-- Start Year Input-->
+                        <div class="form-group">
+                            <label for="startYear">Start Year (Optional):</label>
+                            <input type="text" class="form-control" id="startYear">
+                        </div>
+    
+                        <!-- End Year Input -->
+                        <div class="form-group">
+                            <label for="endYear">End Year (Optional):</label>
+                            <input type="text" class="form-control" id="endYear">
+                        </div>
+    
+                        <!-- Search or Clear Results -->
+                        <button type="submit" class="btn btn-default" id="runSearch"><i class="fa fa-search"></i>
+                            Search</button>
+                        <button type="button" class="btn btn-default" id="clearAll"><i class="fa fa-trash"></i> Clear
+                            Results</button>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End varune's code block -->
 
         <!-- Lets divide the container as in the image i posted in the images folder-->
 
