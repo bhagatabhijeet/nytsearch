@@ -14,11 +14,13 @@ $(document).ready(function(){
     
     //add event handler to runSearch button
     $("#runSearch").on("click",searchArticles);
-
-
-
-   
+    $("#clearAll").on("click",clearArticles);
+    
 });
+
+function clearArticles(){
+    $('#search-results').empty();
+}
 
 
 // this is where the search will happen
